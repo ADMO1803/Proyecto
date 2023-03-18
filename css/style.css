@@ -15,6 +15,10 @@
 	 text-decoration: none;
 }
 
+link .icon{
+	font-size: 60px;
+}
+
 html,body{
 	width: 100%!important;
 	overflow-x: hidden!important;
@@ -50,11 +54,31 @@ header{
 	left: 0;
 	top: 0;
 	width: 100%;
+	z-index: 1000;
     justify-content: space-between;
     align-items: center;
 	padding: 22px 16% 30px;
 	transition: all .40s ease;
 }
+
+/*SCROLL-ABAJO*/
+header.abajo{
+	height: auto;
+	background: var(--primary);
+}
+
+header.abajo .logo span {
+	color: var(--text);
+}
+
+header.abajo .logo{
+	color: var(--bg);
+}
+
+header.abajo #menu-icon{
+	color: var(--bg);
+}
+/*END SCROLL-ABAJO*/
 
 .logo{
 	font-size: 25px;
@@ -102,7 +126,7 @@ header{
 /*=====  End of HEADER  ======*/
 
 /*============================
-=        SECTION HOME           =
+=        SECTION-HOME           =
 ============================*/
 
 section{
@@ -167,7 +191,6 @@ section{
 	justify-content: end;
 	width: 450px;
 	height: auto;
-	margin: 0 auto;
 }
 
 .btn{
@@ -186,7 +209,88 @@ section{
 	transform: translateY(-5px);
 }
 
-/*=====  End of SECTION HOME  ======*/
+/*=====  End of SECTION-HOME  ======*/
+
+/*============================
+=      SECTION-SERVICIOS       =
+============================*/
+
+.servicios{
+	background: ;
+}
+
+.servicios-text{
+	text-align: center;
+}
+
+.servicios-text h1{
+	font-size: 40px;
+	font-weight: 600;
+	letter-spacing: 1;
+	margin-bottom: 5px;
+	color: var(--text);
+}
+
+.servicios-text h4{
+	font-size: 25px;
+	font-weight: 600;
+	letter-spacing: 1;
+	color: var(--text);
+}
+
+.servicios-cont{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+	align-items: center;
+	text-align: center;
+	gap: 2rem;
+	margin-top: 5rem;
+}
+
+.caja{
+	padding: 45px;
+	background: var(--primary);
+	border-top: 5px solid transparent;
+	cursor: pointer;
+	border-radius: 1rem;
+	transition: all .40s ease;
+}
+
+.caja i{
+	font-size: 40px;
+	color: var(--bg);
+}
+
+.caja h3{
+	font-size: 24px;
+	font-weight: 600;
+	margin: 15px 0;
+	color: var(--text);
+	transition: all .40s ease;
+}
+
+.caja p{
+	color: var(--bg);
+	line-height: 20px;
+}
+
+.caja:hover{
+	transform: translateY(-5px);
+}
+
+
+
+/*=====  End of SECTION-SERVICIOS  ======*/
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 1325px){
 	header{
@@ -195,6 +299,10 @@ section{
 
 	section{
 		padding: 130px 3%;
+	}
+
+	.text-home{
+		margin: 50px 0;
 	}
 
 	.title-home-h1{
@@ -217,5 +325,60 @@ section{
    .img-home{
 	width: 400px;
    }
+}
 
+@media (max-width: 900px){
+	.home{
+		flex-direction: column-reverse;
+	}
+
+	.text-home{
+		justify-content: center;
+	}
+
+	.title-home-h1{
+	text-align: center;
+    }
+
+    .title-home-h1 span{
+	text-align: center;
+    }
+ 
+    .title-home-h2{
+	text-align: center;
+    }
+
+    .home img{
+	justify-content: center;
+	text-align: center;
+    }
+}
+
+@media (max-width: 800px){
+	.menu-nav{
+		display: none;
+	}
+
+	#menu-icon{
+		display: block;
+	}
+}
+
+@media (max-width: 500px){
+	.home img{
+	width: 350px;
+    }
+
+    .title-home-h1{
+	font-size: 28px;
+    }
+
+    .title-home-h1 span{
+	font-size: 30px;
+	width: 90px;
+    }
+ 
+    .title-home-h2{
+	font-size: 25px;
+    }
 }

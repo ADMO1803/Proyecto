@@ -10,6 +10,10 @@ AOS.init();
 =            HEADER-ABAJO            =
 ====================================*/
 
-
+window.addEventListener("scroll", function() {
+	// body...
+	var header = document.querySelector("header");
+	header.classList.toggle("abajo", window.scrollY>0);
+})
 /*=====  End of HEADER-ABAJO  ======*/
 
