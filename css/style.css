@@ -21,6 +21,7 @@ html,body{
 }
 
 body{
+	padding-top: 40px;
 	background: var(--bg);
 	font-family: 'Open Sans', sans-serif;
 	font-style: normal;
@@ -45,12 +46,13 @@ body::-webkit-scrollbar-thumb{
 header{
 	position: fixed;
 	display: flex;
-    width: 100%;
     right: 0;
-    left: 0;
+	left: 0;
+	top: 0;
+	width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 16% 30px;
+	padding: 22px 16% 30px;
 	transition: all .40s ease;
 }
 
@@ -94,7 +96,6 @@ header{
 	color: var(--text);
 	z-index: 10001;
 	cursor: pointer;
-	display: ;
 }
 
 /*=====  End of HEADER  ======*/
@@ -105,6 +106,38 @@ header{
 
 section{
     padding: 80px 16% 60px;
+}
+.home{
+	display: flex;
+	justify-content: space-between;
+}
+.title-home-h1,
+.title-home-h2{
+	margin-bottom: 10px;
+}
+.parrafo-home{
+	margin-bottom: 25px;
+}
+.img-home{
+	position: relative;
+	left: 20px;
+	width: 400px;
+	height: 250px;
+}
+.boton-home{
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 30px;
+	color: #ddd;
+	background: var(--primary);
+	transition: .2s;
+}
+.boton-home:hover{
+	background: #443bff;
+	transform: translateY(-4px);
 }
 
 
