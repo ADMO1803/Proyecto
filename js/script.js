@@ -7,13 +7,8 @@ AOS.init();
 /*=====  End of AOS SCROLL  ======*/
 
 /*====================================
-=            HEADER-ABAJO            =
+=            MENU            =
 ====================================*/
 
-window.addEventListener("scroll", function() {
-	// body...
-	var header = document.querySelector("header");
-	header.classList.toggle("abajo", window.scrollY>0);
-})
-/*=====  End of HEADER-ABAJO  ======*/
+/*=====  End of MENU ======*/
 
