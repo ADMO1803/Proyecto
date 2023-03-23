@@ -69,10 +69,12 @@ header.abajo{
 
 header.abajo .logo span {
 	color: var(--text);
+	z-index: 1000;
 }
 
 header.abajo .logo{
 	color: var(--bg);
+	z-index: 1000;
 }
 
 header.abajo #menu-icon{
@@ -212,12 +214,52 @@ section{
 /*=====  End of SECTION-HOME  ======*/
 
 /*============================
+=      SECTION-NOSOTROS       =
+============================*/
+
+.nosotros{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100vh;
+}
+
+.nosotros img{
+	position: relative;
+	justify-content: start;
+	width: 450px;
+	height: auto;
+}
+
+.text-noostros{
+	justify-content: end;
+}
+
+.text-nosotros h1{
+	margin-bottom: 5px;
+	font-size: 40px;
+	font-weight: 600;
+	letter-spacing: 1;
+	color: var(--text);
+}
+
+.text-nosotros p{
+	margin-bottom: 25px;
+	font-size: 1rem;
+	font-weight: 400;
+	text-align: justify;
+	color: var(--text-p);
+}
+
+/*=====  End of SECTION-NOSOTROS  ======*/
+
+/*============================
 =      SECTION-SERVICIOS       =
 ============================*/
 
-.servicios{
-	background: ;
-}
+/*.servicios{
+	background: #f2f2f2;
+}*/
 
 .servicios-text{
 	text-align: center;
@@ -277,8 +319,6 @@ section{
 .caja:hover{
 	transform: translateY(-5px);
 }
-
-
 
 /*=====  End of SECTION-SERVICIOS  ======*/
 
@@ -352,9 +392,14 @@ section{
 	justify-content: center;
 	text-align: center;
     }
+
+    .nosotros{
+    	flex-direction: column;
+    }
 }
 
 @media (max-width: 800px){
+	
 	.menu-nav{
 		display: none;
 	}
@@ -366,19 +411,23 @@ section{
 
 @media (max-width: 500px){
 	.home img{
-	width: 350px;
+	    width: 350px;
+    }
+
+    .nosotros img{
+    	width: 350px;
     }
 
     .title-home-h1{
-	font-size: 28px;
+	    font-size: 28px;
     }
 
     .title-home-h1 span{
-	font-size: 30px;
-	width: 90px;
+	    font-size: 30px;
+	    width: 90px;
     }
  
     .title-home-h2{
-	font-size: 25px;
+	    font-size: 25px;
     }
 }
