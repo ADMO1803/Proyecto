@@ -55,6 +55,8 @@ header{
 	left: 0;
 	top: 0;
 	width: 100%;
+	height: auto;
+	background: var(--primary);
 	z-index: 100;
     justify-content: space-between;
     align-items: center;
@@ -63,24 +65,7 @@ header{
 }
 
 /*SCROLL-ABAJO*/
-header.abajo{
-	height: auto;
-	background: var(--primary);
-}
 
-header.abajo .logo span {
-	color: var(--text);
-	z-index: 100;
-}
-
-header.abajo .logo{
-	color: var(--bg);
-	z-index: 100;
-}
-
-header.abajo #menu-icon{
-	color: var(--bg);
-}
 /*END SCROLL-ABAJO*/
 
 .logo{
@@ -88,7 +73,7 @@ header.abajo #menu-icon{
 	font-weight: 600;
 	letter-spacing: 1;
 	line-height: 58px;
-	color: var(--text);
+	color: var(--bg);
 }
 
 .logo span{
@@ -96,7 +81,7 @@ header.abajo #menu-icon{
 	line-height: 58px;
 	font-weight: 600;
 	letter-spacing: 1;
-	color: var(--primary);
+	color: var(--text);
 }
 
 .menu-nav ul{
@@ -108,14 +93,14 @@ header.abajo #menu-icon{
 	padding: 10px 25px;
 	font-size: 1rem;
 	font-weight: 500;
-	color: var(--text);
+	color: var(--bg);
 	border-radius: 0.5rem;
 	transition: all .40s ease;
 }
 
 .menu-nav a:hover{
-	background: var(--primary);
-	color: var(--color);
+	background: var(--bg);
+	color: var(--text);
 }
 
 #menu-icon{
@@ -216,16 +201,22 @@ section{
 
 /*=====  End of SECTION-HOME  ======*/
 
-
-/* ----------------------------------SECTION NOSOTROS */
+/*============================
+=      SECTION-NOSOTROS       =
+============================*/
 
 .nosotros{
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100vh;
 }
+
 .img-nosotros{
 	width: 450px;
 	height: auto;
 }
+
 .title-nosotros-h1{
 		margin-bottom: 5px;
 		font-size: 40px;
@@ -242,17 +233,24 @@ section{
 }
 
 
+/*=====  End of SECTION-NOSOTROS  ======*/
+
 /*============================
 =      SECTION-SERVICIOS       =
 ============================*/
 
+.servicios{
+	height: 100vh;
+	margin-top: 100px;
+	margin-bottom: 400px;
+}
 
 .servicios-text{
 	text-align: center;
 }
 
 .servicios-text h1{
-	font-size: 40px;
+	font-size: 35px;
 	font-weight: 600;
 	letter-spacing: 1;
 	margin-bottom: 5px;
@@ -260,52 +258,52 @@ section{
 }
 
 .servicios-text h4{
-	font-size: 25px;
+	font-size: 20px;
 	font-weight: 600;
 	letter-spacing: 1;
-	color: var(--text);
+	color: var(--primary);
 }
 
-.servicios-cont{
+.contenedor-cajas{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, auto));
 	align-items: center;
 	text-align: center;
 	gap: 2rem;
-	margin-top: 5rem;
+	margin-top: 3rem;
 }
 
-.caja{
-	padding: 45px;
-	background: var(--primary);
-	border-top: 5px solid transparent;
+.card{
+	padding: 30px;
+	border-radius: 0.5rem;
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+	background: var(--bg);
 	cursor: pointer;
-	border-radius: 1rem;
 	transition: all .40s ease;
 }
 
-.caja i{
-	font-size: 40px;
-	color: var(--bg);
+.card i{
+	margin: 20px;
+	color: var(--primary);
 }
 
-.caja h3{
-	font-size: 24px;
+.card h2{
+	margin-bottom: 10px;
 	font-weight: 600;
-	margin: 15px 0;
+	letter-spacing: 1;
+	text-align: center;
+	color: var(--primary);
+}
+
+.card p{
+	font-size: 1rem;
+	font-weight: 300;
 	color: var(--text);
-	transition: all .40s ease;
 }
 
-.caja p{
-	color: var(--bg);
-	line-height: 20px;
+.card:hover{
+	transform: translateY(-10px);
 }
-
-.caja:hover{
-	transform: translateY(-5px);
-}
-
 
 
 /*=====  End of SECTION-SERVICIOS  ======*/
@@ -399,9 +397,14 @@ textarea{
 }
 
 
+/*============================
+=      SECTION-CONTACOS       =
+============================*/
 
 
+/*FORMULARIO-CONTACTOS*/
 
+/*=====  End of SECTION-CONTACTOS  ======*/
 
 @media (max-width: 1325px){
 	header{
@@ -463,9 +466,18 @@ textarea{
 	justify-content: center;
 	text-align: center;
     }
+
+    .nosotros{
+    	flex-direction: column;
+    }
+
+    .servicios{
+	margin-top: 250px;
+}
 }
 
 @media (max-width: 800px){
+	
 	.menu-nav{
 		display: none;
 	}
@@ -477,19 +489,36 @@ textarea{
 
 @media (max-width: 500px){
 	.home img{
-	width: 350px;
+	    width: 350px;
+    }
+
+    .nosotros img{
+    	width: 350px;
     }
 
     .title-home-h1{
-	font-size: 28px;
+	    font-size: 28px;
     }
 
     .title-home-h1 span{
-	font-size: 30px;
-	width: 90px;
+	    font-size: 30px;
+	    width: 90px;
     }
  
     .title-home-h2{
-	font-size: 25px;
+	    font-size: 25px;
     }
+
+    .title-nosotros-h1{
+    	font-size: 30px;
+    }
+
+    .servicios{
+    	margin-top: 300px;
+    }
+
+    .servicios h1{
+    	font-size: 30px;
+    }
+
 }
