@@ -329,6 +329,7 @@ section{
 	margin-top: 50px;
 }
 .container-formulario{
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -349,8 +350,8 @@ select{
 }
 .label-nombre{
     position: absolute;
-    top: 27.5%;
-    right: 42%;
+    top: 4%;
+    right: 81%;
     color: rgba(0, 0, 0, 0.842);
     font-size: 16px;
     pointer-events: none;
@@ -358,8 +359,8 @@ select{
 }
 .label-email{
     position: absolute;
-    top: 41%;
-    right: 43%;
+    top: 28%;
+    right: 85%;
     /* transform: translateY(-18px); */
     color: rgba(0, 0, 0, 0.836);
     font-size: 16px;
@@ -368,7 +369,7 @@ select{
 }
 .input-nombre:focus ~ .label-nombre,
 .input-email:focus ~ .label-email{
-    transform: translateY(-20px);
+	transform: translateY(-20px) translateX(-5px);
     font-size: 14px;
     padding: 0 2px;
     background: rgb(255, 255, 255); 
