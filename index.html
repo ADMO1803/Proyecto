@@ -35,7 +35,7 @@
 
     <!-----------------SECTION-INICIO------------------>
     <section class="home" id="Inicio">
-		<div class="text-home">
+		<div class="text-home" data-aos="fade-down-right">
 			<h1 class="title-home-h1">Desarrolladores Web</h1>
 			<h2 class="title-home-h2">Expertos en Langgins pages</h2>
 			<p class="parrafo-home">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab ipsum enim recusandae id placeat nemo officia, temporibus, tempore totam laboriosam doloribus beatae autem eos laborum deserunt nobis iste, quam harum!</p>
@@ -48,7 +48,7 @@
     <!------------------SECTION-NOSOTROS------------------->
 	<section class="nosotros" id="Nosotros">
 		<div class="container-img-nosotros">
-			<img class="img-nosotros" src="img/nosotros.png" alt="">
+			<img class="img-nosotros" src="img/nosotros.png" alt="imagen-nosotros">
 		</div>
 		<div class="text-home">
 			<h1 class="title-nosotros-h1">Quienes Somos</h1>
@@ -122,7 +122,7 @@
     		<input type="email" name="gmail" placeholder="Ingrese su Correo" required="">
     		<input type="" name="tema" placeholder="Ingrese Tema" required="">
     		<textarea name="mensaje" id="mensaje" cols="40" rows="10" placeholder="Envianos tu Mensaje" required=""></textarea>
-    		<input type="submit" value="Enviar" class="boton">
+    		<input type="submit" value="Enviar" class="boton" onclick="enviar()">
     	</form>
     </div>
     <!-- CONTACTOS-IMAGEN -->
@@ -145,6 +145,7 @@
     <!-------------------FOOTER END-------------------->
     <!------- ENLACES-SCRIPTS ------->
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

@@ -86,13 +86,11 @@ header{
 	font-size: 1rem;
 	font-weight: 500;
 	color: var(--bg);
-	border-radius: 0.5rem;
 	transition: all .40s ease;
 }
 
 .menu-nav a:hover{
-	background: rgb(27,0,36);
-    background: linear-gradient(90deg, rgba(27,0,36,1) 0%, rgba(108,99,255,1) 0%, rgba(154,0,255,1) 100%);
+	border-bottom: 2px solid var(--bg);
 }
 
 #menu-icon{
@@ -488,7 +486,25 @@ footer {
 @media (max-width: 800px){
 	
 	.menu-nav{
-		display: none;
+		position: fixed;
+		top: 90px;
+		right: -100%;
+		background: rgb(27,0,36);
+        background: linear-gradient(90deg, rgba(27,0,36,1) 0%, rgba(108,99,255,1) 0%, rgba(154,0,255,1) 100%);
+		width: 50%;
+		height: 100%;
+		padding: 4.5rem 0 0 3rem;
+		transition: all .40s ease;
+	}
+
+	.menu-nav ul{
+	    display: flex;
+	    flex-direction: column;
+	    row-gap: 3rem;
+    }
+
+    .menu-nav.active{
+		right: 0;
 	}
 
 	#menu-icon{
@@ -496,9 +512,17 @@ footer {
 		color: var(--bg);
 	}
 
+	.servicios{
+		margin-top: 300px;
+	}
+
 }
 
 @media (max-width: 500px){
+	.menu-nav{
+		width: 70%;
+	}
+
 	.home img{
 	    width: 350px;
     }
@@ -526,10 +550,6 @@ footer {
 
     .title-nosotros-h1{
     	font-size: 30px;
-    }
-
-    .servicios{
-    	margin-top: 100px;
     }
 
     .servicios h1{
