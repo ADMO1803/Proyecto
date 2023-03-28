@@ -557,4 +557,10 @@ footer {
     }
 }
 
+@media (max-width: 350px){
+	.servicios{
+		margin-top: 400px;
+	}
+}
+
 /*=====  End of ADAPTACION-MOBILE  ======*/
