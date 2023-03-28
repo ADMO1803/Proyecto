@@ -2,7 +2,6 @@
     --primary: #6c63ff;
     --color-hover: #efefef;
     --text: #161617;
-    --color: #ddd;
     --text-p: #656565;
     --bg: #fff;
 }
@@ -19,10 +18,14 @@ link .icon{
 	font-size: 60px;
 }
 
+html{
+	scroll-behavior: smooth;
+}
+
 html,body{
 	width: 100%!important;
-	height: 100vh;
 	overflow-x: hidden!important;
+	height: 100vh;
 }
 
 body{
@@ -32,18 +35,6 @@ body{
 	font-style: normal;
 }
 
-/*SCROLL-BAR*/
-body::-webkit-scrollbar{
-	width: 10px;
-	background: var(--color);
-}
-
-body::-webkit-scrollbar-thumb{
-	background: var(--primary);
-	border-radius: 0.5rem;
-	border: 1px solid var(--text);
-}
-/*SCROLL-BAR END*/
 /*============================
 =            HEADER            =
 ============================*/
@@ -56,7 +47,8 @@ header{
 	top: 0;
 	width: 100%;
 	height: auto;
-	background: var(--primary);
+	background: rgb(27,0,36);
+    background: linear-gradient(90deg, rgba(27,0,36,1) 0%, rgba(108,99,255,1) 0%, rgba(154,0,255,1) 100%);
 	z-index: 100;
     justify-content: space-between;
     align-items: center;
@@ -99,8 +91,8 @@ header{
 }
 
 .menu-nav a:hover{
-	background: var(--bg);
-	color: var(--text);
+	background: rgb(27,0,36);
+    background: linear-gradient(90deg, rgba(27,0,36,1) 0%, rgba(108,99,255,1) 0%, rgba(154,0,255,1) 100%);
 }
 
 #menu-icon{
@@ -136,32 +128,14 @@ section{
 
 .title-home-h1{
 	margin-bottom: 5px;
-	font-size: 40px;
+	font-size: 45px;
 	font-weight: 600;
 	letter-spacing: 1;
 	color: var(--text);
 }
 
-.title-home-h1 span{
-	display: inline-block;
-	width: 120px;
-	padding: .25rem .75rem;
-	border-radius: .5rem;
-	font-size: 45px;
-	background: var(--primary);
-	color: var(--bg);
-	cursor: pointer;
-	transform: rotate(10deg);
-	transition: all .40s ease;
-}
-
-.title-home-h1 span:hover{
-	background: var(--text);
-	transform: translateY(-5px);
-}
-
 .title-home-h2{
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 	font-size: 30px;
 	font-weight: 500;
 	letter-spacing: 1;
@@ -189,13 +163,13 @@ section{
 	border-radius: 0.5rem;
 	font-size: 17px;
 	font-weight: 500;
-	background: var(--primary);
+	background: rgb(27,0,36);
+    background: linear-gradient(90deg, rgba(27,0,36,1) 0%, rgba(108,99,255,1) 0%, rgba(154,0,255,1) 100%);
 	color: var(--color-hover);
 	transition: all .40s ease;
 }
 
 .btn:hover{
-	background: var(--text);
 	transform: translateY(-5px);
 }
 
@@ -218,11 +192,11 @@ section{
 }
 
 .title-nosotros-h1{
-		margin-bottom: 5px;
-		font-size: 40px;
-		font-weight: 600;
-		letter-spacing: 1;
-		color: var(--text);
+	margin-bottom: 5px;
+	font-size: 40px;
+	font-weight: 600;
+	letter-spacing: 1;
+	color: var(--text);
 }
 .parrafo-nosotros{
 	margin-bottom: 25px;
@@ -238,11 +212,8 @@ section{
 /*============================
 =      SECTION-SERVICIOS       =
 ============================*/
-
 .servicios{
-	height: 100vh;
 	margin-top: 100px;
-	margin-bottom: 400px;
 }
 
 .servicios-text{
@@ -264,147 +235,178 @@ section{
 	color: var(--primary);
 }
 
-.contenedor-cajas{
+.servicios-cont{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, auto));
 	align-items: center;
 	text-align: center;
 	gap: 2rem;
-	margin-top: 3rem;
+	margin-top: 5rem;
 }
 
-.card{
-	padding: 30px;
-	border-radius: 0.5rem;
-	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
-	background: var(--bg);
+.caja{
+	padding: 45px;
+	/*border-radius: 0.5rem;*/
+	box-shadow: 0 15px 25px rgba(0,0,0,0.2);
 	cursor: pointer;
+	background: var(--bg);
+	border-bottom: 5px solid var(--primary);
 	transition: all .40s ease;
 }
 
-.card i{
-	margin: 20px;
+.caja:hover{
+	background: rgb(27,0,36);
+    background: linear-gradient(90deg, rgba(27,0,36,1) 0%, rgba(108,99,255,1) 0%, rgba(154,0,255,1) 100%);
+    border-bottom: none;
+}
+
+.caja:hover i{
+	color: var(--bg);
+}
+
+.caja:hover h3{
+	color: var(--bg);
+}
+
+.caja:hover p{
+	color: var(--bg);
+}
+
+.caja i{
+	font-size: 60px;
 	color: var(--primary);
 }
 
-.card h2{
-	margin-bottom: 10px;
+.caja h3{
+	font-size: 24px;
 	font-weight: 600;
-	letter-spacing: 1;
-	text-align: center;
+	margin: 15px 0;
 	color: var(--primary);
 }
 
-.card p{
+.caja p{
 	font-size: 1rem;
-	font-weight: 300;
-	color: var(--text);
+	font-weight: 400;
+	color: var(--text-p);
 }
 
-.card:hover{
-	transform: translateY(-10px);
+.caja:hover{
+	transform: scale(1.01) translateY(-5px);
 }
 
 
 /*=====  End of SECTION-SERVICIOS  ======*/
 
+/*============================
+=      SECTION-CONTACTOS      =
+============================*/
+.contactos-text{
+	text-align: center;
+}
 
-/* -----------------------------------------SECTION CONTACTOS */
+.contactos-text h1{
+	font-size: 35px;
+	font-weight: 600;
+	letter-spacing: 1;
+	margin-bottom: 5px;
+	color: var(--text);
+}
 
 .contactos{
-	display: flex;
-	justify-content: space-between;
-}
-.title-contactos{
-	position: absolute;
-	top: 50px;
-	left: 40%;
-	font-size: 40px;
-}
-.img-contactos{
-	width: 500px;
-	height: auto;
-	margin-top: 50px;
-}
-.container-formulario{
-	position: relative;
-	display: flex;
-	justify-content: center;
+	display: grid;
+	grid-template-columns:repeat(2, 1fr);
 	align-items: center;
-	margin-top: 50px;
-	/* border: 1px solid black; */
+	gap: 2rem;
+	margin-top: 100px;
 }
-input,
-select{
-    width: 70%;
-    height: 45px;
-    margin-bottom: 10%;
-    border-radius: 5px;
-	border: 3px solid var(--primary);
-	font-size: 17px;
-    color: rgb(0, 0, 0);
-    background: transparent;
-    outline: none;
+
+.contactos img{
+	width: 450px;
+	height: auto;
+	margin-bottom: 5rem;
 }
-.label-nombre{
-    position: absolute;
-    top: 4%;
-    right: 81%;
-    color: rgba(0, 0, 0, 0.842);
-    font-size: 16px;
-    pointer-events: none;
-    transition: .4s;
+
+/*==========FORMULARIO-CONTACTOS==========*/
+
+.contactos-form form{
+	position: relative;	
 }
-.label-email{
-    position: absolute;
-    top: 28%;
-    right: 85%;
-    /* transform: translateY(-18px); */
-    color: rgba(0, 0, 0, 0.836);
-    font-size: 16px;
-    pointer-events: none;
-    transition: .4s;
-}
-.input-nombre:focus ~ .label-nombre,
-.input-email:focus ~ .label-email{
-	transform: translateY(-20px) translateX(-5px);
-    font-size: 14px;
-    padding: 0 2px;
-    background: rgb(255, 255, 255); 
-}
-.input-nombre:valid ~ .label-nombre,
-.input-email:valid ~ .label-email{
-    transform: translateY(-20px);
-    font-size: 14px;
-	padding: 0 2px;
-	background: #fff;
-}
-.input-email:valid{
-	width: 70%;
-    height: 45px;
-	border: 3px solid greenyellow;
-    font-size: 16px;
-	padding: 0 2px;
-}
-.input-email:invalid{
-	border: 3px solid red;
-}
-textarea{
-	border-radius: 5px;
-	border: 3px solid var(--primary);
-	font-size: 16px;
+
+.contactos-form form input, form textarea{
+	border: 2px solid var(--primary);
 	outline: none;
+	width: 100%;
+	margin: 5px;
+	padding: 18px;
+	background: /*#18191a*/ transparent;
+	font-size: 1rem;
+	font-weight: 600;
+	border-radius: 30px; 
+	color: black;
 }
 
+.contactos-form textarea{
+	resize: none;
+	height: 220px;
+}
 
-/*============================
-=      SECTION-CONTACOS       =
-============================*/
+.contactos-form .boton{
+	margin-top: 5px;
+	font-size: 17px;
+	font-weight: 600;
+	background: rgb(27,0,36);
+    background: linear-gradient(90deg, rgba(27,0,36,1) 0%, rgba(108,99,255,1) 0%, rgba(154,0,255,1) 100%);
+	color: var(--bg);
+	width: 190px;
+	transition: all .40s ease;
+	margin: 10px;
+	cursor: pointer;
+}
 
-
-/*FORMULARIO-CONTACTOS*/
+.contactos-form .boton:hover{
+	transform: scale(1.01) translateY(-5px);
+}
 
 /*=====  End of SECTION-CONTACTOS  ======*/
+
+/*SCROLL*/
+.top{
+	position: fixed;
+	bottom: 2.5rem;
+	right: 2.5rem;
+}
+
+.top i{
+	color: var(--bg);
+	background: rgb(27,0,36);
+    background: linear-gradient(90deg, rgba(27,0,36,1) 0%, rgba(108,99,255,1) 0%, rgba(154,0,255,1) 100%);
+	font-size: 20px;
+	padding: 10px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+/*SCROLL-END*/
+
+/*============================
+=           FOOTER            =
+============================*/
+footer {
+	width: 100%;
+	background: var(--bg);
+	margin: 0 auto;
+	color: var(--text);
+	text-align: center;
+	padding: 30px;
+	box-sizing: border-box;
+	font-size: 18px;
+	margin-top: 15px;
+}
+
+/*=====  End of FOOTER  ======*/
+
+/*============================
+=      ADAPTACIOM-MOBILE      =
+============================*/
 
 @media (max-width: 1325px){
 	header{
@@ -468,12 +470,19 @@ textarea{
     }
 
     .nosotros{
-    	flex-direction: column;
+    flex-direction: column;
     }
 
-    .servicios{
-	margin-top: 250px;
 }
+
+@media (max-width: 860px){
+	.contactos img{
+		display: none;
+	}
+
+	.contactos{
+	grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 800px){
@@ -484,7 +493,9 @@ textarea{
 
 	#menu-icon{
 		display: block;
+		color: var(--bg);
 	}
+
 }
 
 @media (max-width: 500px){
@@ -493,6 +504,10 @@ textarea{
     }
 
     .nosotros img{
+    	width: 350px;
+    }
+
+    .contactos img{
     	width: 350px;
     }
 
@@ -514,11 +529,12 @@ textarea{
     }
 
     .servicios{
-    	margin-top: 300px;
+    	margin-top: 100px;
     }
 
     .servicios h1{
     	font-size: 30px;
     }
-
 }
+
+/*=====  End of ADAPTACION-MOBILE  ======*/
